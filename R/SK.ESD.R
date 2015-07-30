@@ -7,12 +7,12 @@
 #' @return a SK object
 #' 
 #' @examples
-#' sk <- ScottKnottESD(example)
+#' sk <- SK.ESD(example)
 #' sk$original  # Original Groups
 #' sk$groups    # Corrected Groups with effect size wise
 #' sk$reverse   # Reversed Groups
 #' 
-ScottKnottESD <- function(data){
+SK.ESD <- function(data){
     library(ScottKnott); library(reshape); library(effsize)
     data <- data.frame(data)
     av <- aov(value ~ variable, data=melt(data))

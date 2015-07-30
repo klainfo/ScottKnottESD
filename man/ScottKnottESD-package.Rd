@@ -14,7 +14,7 @@ Package: \tab ScottKnottESD\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
 Date: \tab 2015-07-29\cr
-License: \tab What license is it under?\cr
+License: \tab MIT\cr
 }
 
 }
@@ -24,7 +24,7 @@ Chakkrit (Kla) Tantithamthavorn
 Maintainer: Chakkrit (Kla) Tantithamthavorn <kla@chakkrit.com>
 }
 \references{
-~~ Literature or other references for background information ~~
+-
 }
 
 \keyword{ ScottKnottESD }
@@ -32,5 +32,8 @@ Maintainer: Chakkrit (Kla) Tantithamthavorn <kla@chakkrit.com>
 -
 }
 \examples{
--
+sk <- SK.ESD(example)
+sk$original  # Original Groups
+sk$groups    # Corrected Groups with effect size wise
+sk$reverse   # Reversed Groups
 }
