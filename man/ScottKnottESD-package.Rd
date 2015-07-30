@@ -1,0 +1,36 @@
+\name{ScottKnottESD-package}
+\alias{ScottKnottESD-package}
+\alias{ScottKnottESD}
+\docType{package}
+\title{
+The Scott-Knott Effect Size Difference (ESD) test
+}
+\description{
+An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
+}
+\details{
+\tabular{ll}{
+Package: \tab ScottKnottESD\cr
+Type: \tab Package\cr
+Version: \tab 1.0\cr
+Date: \tab 2015-07-29\cr
+License: \tab What license is it under?\cr
+}
+
+}
+\author{
+Chakkrit (Kla) Tantithamthavorn
+
+Maintainer: Chakkrit (Kla) Tantithamthavorn <kla@chakkrit.com>
+}
+\references{
+~~ Literature or other references for background information ~~
+}
+
+\keyword{ ScottKnottESD }
+\seealso{
+-
+}
+\examples{
+-
+}
