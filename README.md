@@ -7,6 +7,7 @@ An enhancement of the Scott-Knott test (which cluster distributions into statist
 with `devtools `:
 ```r
 devtools::install_github('klainfo/ScottKnottESD')
+devtools::install_github('klainfo/ScottKnottESD',auth_token="19f8254e31570edab7415ce0ead4cdc885de8cbf")
 ```
 ### Usage
 ```r
