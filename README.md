@@ -12,7 +12,7 @@ devtools::install_github('klainfo/ScottKnottESD',auth_token="19f8254e31570edab74
 ### Usage
 ```r
 library(ScottKnottESD)
-sk <- ScottKnottESD(example)
+sk <- SK.ESD(example)
 sk$original  # Original Groups
 sk$groups    # Corrected Groups with effect size wise
 sk$reverse   # Reversed Groups
