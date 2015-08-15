@@ -17,3 +17,13 @@ sk$original  # Original Groups
 sk$groups    # Corrected Groups with effect size wise
 sk$reverse   # Reversed Groups
 ```
+
+### Reference
+```tex
+@misc{ScottKnottESD,
+title = {{ScottKnottESD: The Scott-Knott Effect Size Difference (ESD) test}},
+author = {Chakkrit Tantithamthavorn},
+year = {2015},
+howpublished = {\url{http://github.com/klainfo/ScottKnottESD}}
+}
+```
