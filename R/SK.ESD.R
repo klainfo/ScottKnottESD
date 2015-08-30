@@ -20,7 +20,7 @@ SK.ESD <- function(data, long=FALSE){
         tmp <- do.call(cbind, split(data, data$variable))  
         tmp <- tmp[,grep("value",names(tmp))]
         names(tmp) <- gsub(".value", "", names(tmp))
-        data = tmp
+        data <- tmp
     }
     data <- data.frame(data)
     av <- aov(value ~ variable, data=melt(data)) 
