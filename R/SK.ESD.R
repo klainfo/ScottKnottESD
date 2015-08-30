@@ -12,10 +12,18 @@
 #' sk$groups    # Corrected Groups with effect size wise
 #' sk$reverse   # Reversed Groups
 #' 
-SK.ESD <- function(data){
+#' sk <- SK.ESD(melt(example), long=TRUE)
+#' 
+SK.ESD <- function(data, long=FALSE){
     library(ScottKnott); library(reshape); library(effsize)
+    if(long){
+        tmp <- do.call(cbind, split(data, data$variable))  
+        tmp <- tmp[,grep("value",names(tmp))]
+        names(tmp) <- gsub(".value", "", names(tmp))
+        data = tmp
+    }
     data <- data.frame(data)
-    av <- aov(value ~ variable, data=melt(data))
+    av <- aov(value ~ variable, data=melt(data)) 
     sk <- SK(av, which='variable',  dispersion='s', sig.level=0.05) 
     sk$original <- sk$groups; names(sk$original) <- rownames(sk$m.inf)
     ranking <- sk$groups; names(ranking) <- rownames(sk$m.inf)
