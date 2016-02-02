@@ -23,6 +23,10 @@ SK.ESD <- function(data, long=FALSE){
         data <- tmp
     }
     data <- data.frame(data)
+    
+    transformLog  <- function(y){ y <- log1p(y)}
+    data <- data.frame(apply(data, 2, transformLog))
+    
     av <- aov(value ~ variable, data=melt(data)) 
     sk <- SK(av, which='variable',  dispersion='s', sig.level=0.05) 
     sk$original <- sk$groups; names(sk$original) <- rownames(sk$m.inf)

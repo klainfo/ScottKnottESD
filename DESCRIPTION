@@ -5,7 +5,8 @@ Version: 1.0
 Date: 2015-07-29
 Author: Who wrote it
 Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
+Description: An enhancement of the Scott-Knott test (which cluster distributions
+    into statistically distinct ranks) that takes effect size into consideration.
 License: MIT
 Imports:
     ScottKnott,
@@ -14,3 +15,4 @@ Imports:
 LazyData: true
 URL: https://github.com/klainfo/ScottKnottESD
 BugReports: https://github.com/klainfo/ScottKnottESD/issues
+RoxygenNote: 5.0.1
