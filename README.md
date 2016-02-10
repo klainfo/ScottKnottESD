@@ -26,4 +26,12 @@ author = {Chakkrit Tantithamthavorn},
 year = {2015},
 howpublished = {\url{http://github.com/klainfo/ScottKnottESD}}
 }
+
+@article{tantithamthavorn2015mvt,
+  title={{An Empirical Comparison of Model Validation Techniques for Defect Prediction Model}},
+  author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E and Matsumoto, Kenichi},
+  journal={Under Review at IEEE Transactions on Software Engineering},
+  year={2015}
+}
+
 ```
