@@ -7,7 +7,6 @@ An enhancement of the Scott-Knott test (which cluster distributions into statist
 with `devtools `:
 ```r
 devtools::install_github('klainfo/ScottKnottESD')
-devtools::install_github('klainfo/ScottKnottESD',auth_token="19f8254e31570edab7415ce0ead4cdc885de8cbf")
 ```
 ### Usage
 ```r
@@ -27,11 +26,11 @@ year = {2015},
 howpublished = {\url{http://github.com/klainfo/ScottKnottESD}}
 }
 
-@article{tantithamthavorn2015mvt,
+@article{tantithamthavorn2016mvt,
   title={{An Empirical Comparison of Model Validation Techniques for Defect Prediction Model}},
   author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E and Matsumoto, Kenichi},
-  journal={Under Review at IEEE Transactions on Software Engineering},
-  year={2015}
+  journal={IEEE Transactions on Software Engineering},
+  year={2016}
 }
 
 ```
