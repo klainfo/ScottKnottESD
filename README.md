@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/klainfo/ScottKnottESD.svg?branch=master)](https://travis-ci.org/klainfo/ScottKnottESD) 
+
+
 # ScottKnottESD
 The Scott-Knott Effect Size Difference (ESD) test.
 An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.

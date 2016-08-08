@@ -11,9 +11,6 @@ before_install:
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
   - chmod 755 ./travis-tool.sh
   - ./travis-tool.sh bootstrap
-  - ./travis-tool.sh r_binary_install ScottKnott
-  - ./travis-tool.sh r_binary_install effsize
-  - ./travis-tool.sh r_binary_install reshape2
 install:
   - ./travis-tool.sh install_deps
 script: ./travis-tool.sh run_tests
