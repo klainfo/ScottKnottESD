@@ -8,10 +8,16 @@ Maintainer: Chakkrit Tantithamthavorn <kla@chakkrit.com>
 Description: An enhancement of the Scott-Knott test (which cluster distributions
     into statistically distinct ranks) that takes effect size into consideration.
 License: MIT
+Depends:
+    ScottKnott,
+    reshape2,
+    effsize,
+    stats
 Imports:
     ScottKnott,
-    reshape,
-    effsize
+    reshape2,
+    effsize,
+    stats    
 LazyData: true
 URL: https://github.com/klainfo/ScottKnottESD
 BugReports: https://github.com/klainfo/ScottKnottESD/issues

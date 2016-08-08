@@ -12,8 +12,8 @@ An enhancement of the Scott-Knott test (which cluster distributions into statist
 \tabular{ll}{
 Package: \tab ScottKnottESD\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2015-07-29\cr
+Version: \tab 1.1\cr
+Date: \tab 2016-08-08\cr
 License: \tab MIT\cr
 }
 
