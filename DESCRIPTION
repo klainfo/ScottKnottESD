@@ -1,10 +1,10 @@
 Package: ScottKnottESD
 Type: Package
 Title: The Scott-Knott Effect Size Difference (ESD) test
-Version: 1.0
-Date: 2015-07-29
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Version: 1.1
+Date: 2016-08-08
+Author: Chakkrit Tantithamthavorn
+Maintainer: Chakkrit Tantithamthavorn <kla@chakkrit.com>
 Description: An enhancement of the Scott-Knott test (which cluster distributions
     into statistically distinct ranks) that takes effect size into consideration.
 License: MIT
