@@ -4,7 +4,7 @@
 \alias{SK.ESD}
 \title{The Scott-Knott Effect Size Difference (ESD) test}
 \usage{
-SK.ESD(data, long = FALSE)
+SK.ESD(x, ...)
 }
 \arguments{
 \item{data}{a long-format data frame}

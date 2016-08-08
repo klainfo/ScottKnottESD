@@ -1,0 +1,10 @@
+# Sample .travis.yml for R projects.
+#
+# See README.md for instructions, or for more configuration options,
+# see the wiki:
+#   https://github.com/craigcitro/r-travis/wiki
+
+language: r
+sudo: false
+cache: packages
+warnings_are_errors: false
