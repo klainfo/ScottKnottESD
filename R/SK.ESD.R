@@ -1,10 +1,11 @@
-#' The Scott-Knott Effect Size Difference (ESD) test
+#' The Scott-Knott Effect Size Difference (ESD) Test
 #'
 #' An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
 #'
-#' @param data a long-format data frame
-#' @export
-#' @return a SK object
+#' @param x A wide-format data frame.
+#' @param long TRUE if the input data is a long-format.
+#' @param ... Optional parameters.
+#' @return A SK.ESD object.
 #' 
 #' @examples
 #' sk <- SK.ESD(example)
@@ -14,7 +15,8 @@
 #' 
 #' sk <- SK.ESD(melt(example), long=TRUE)
 #' 
+#' @export
 SK.ESD <- 
     function(x, ...){
-        UseMethod("SKESD")
+        UseMethod("SK.ESD")
     }

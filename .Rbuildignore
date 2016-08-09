@@ -1,4 +1,8 @@
+^\.RData
+^\.gitignore
+^\.travis.yml
+^\..Rcheck
+^\.Rproj.user
+^\.git/
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\.travis\.yml$
-^travis-tool\.sh$
