@@ -2,15 +2,19 @@
 % Please edit documentation in R/SK.ESD.R
 \name{SK.ESD}
 \alias{SK.ESD}
-\title{The Scott-Knott Effect Size Difference (ESD) test}
+\title{The Scott-Knott Effect Size Difference (ESD) Test}
 \usage{
 SK.ESD(x, ...)
 }
 \arguments{
-\item{data}{a long-format data frame}
+\item{x}{A wide-format data frame.}
+
+\item{...}{Optional parameters.}
+
+\item{long}{TRUE if the input data is a long-format.}
 }
 \value{
-a SK object
+A SK.ESD object.
 }
 \description{
 An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.

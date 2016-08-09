@@ -2,7 +2,7 @@
 
 
 # ScottKnottESD
-The Scott-Knott Effect Size Difference (ESD) test.
+The Scott-Knott Effect Size Difference (ESD) Test.
 An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
 
 
