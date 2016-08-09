@@ -1,10 +1,32 @@
-#' @method SK.ESD default 
-#' @importFrom ScottKnott SK 
-#' @importFrom reshape2 melt 
-#' @importFrom effsize cohen.d 
-#' @importFrom stats aov 
-#' @export
-SK.ESD.default <- function(x, long=FALSE, ...){
+#' @name "sk_esd"
+#' @title The Scott-Knott Effect Size Difference (ESD) Test
+#'
+#' @description  An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
+#'
+#' @author Chakkrit Tantithamthavorn (kla@chakkrit.com)
+#' 
+#' @param x A wide-format data frame.
+#' @param long TRUE if the input data is a long-format.
+#' @param ... Optional parameters.
+#' 
+#' @return A sk_esd object.
+#' 
+#' @examples
+#' sk <- sk_esd(example)
+#' sk$original  # Original Groups
+#' sk$groups    # Corrected Groups with effect size wise
+#' sk$reverse   # Reversed Groups
+#' 
+#' sk <- sk_esd(melt(example), long=TRUE) # Example command for a long format
+#' 
+#' @import ScottKnott 
+#' @import reshape2 
+#' @import effsize 
+#' @import stats 
+#' @rdname sk_esd
+#' @aliases SK.ESD
+#' @export 
+"sk_esd" <- function(x, long=FALSE, ...){
     if(long){
         tmp <- do.call(cbind, split(x, x$variable))  
         tmp <- tmp[,grep("value",names(tmp))]
@@ -30,23 +52,6 @@ SK.ESD.default <- function(x, long=FALSE, ...){
     sk$groups <- ranking
     sk$reverse <- max(ranking)-ranking+1
     sk$diagnosis <- data.frame(sk$diagnosis)
-    class(sk) <- c(class(sk),"SK.ESD")
+    class(sk) <- c(class(sk),"sk_esd")
     return(sk)
-}
-
-#' Print SK.ESD objects
-#'
-#' S3 method to print SK.ESD objects.
-#'
-#' @param x A SK.ESD object
-#' @param ... Optional parameters.
-#' 
-#' @return The SK.ESD ranks
-#' 
-#' @rdname print
-#' @method print SK.ESD
-#' @export
-print.SK.ESD <- function(x, ...){
-    cat("\nGroups:\n")
-    print(x$groups)
 }

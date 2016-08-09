@@ -7,7 +7,7 @@ Author: Chakkrit Tantithamthavorn
 Maintainer: Chakkrit Tantithamthavorn <kla@chakkrit.com>
 Description: An enhancement of the Scott-Knott test (which cluster distributions
     into statistically distinct ranks) that takes effect size into consideration.
-License: MIT + file LICENSE
+License: GPL (>= 2)
 Depends:
     ScottKnott,
     reshape2,

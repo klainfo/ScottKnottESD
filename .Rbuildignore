@@ -6,3 +6,4 @@
 ^\.git/
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^Makefile
