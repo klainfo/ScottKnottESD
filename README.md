@@ -7,7 +7,7 @@ The Scott-Knott Effect Size Difference (ESD) Test.
 An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
 
 
-### Install
+### Installation
 ######  Install the current release from CRAN::
 ```r
 install.packages("ScottKnottESD")
@@ -36,9 +36,9 @@ author = {Chakkrit Tantithamthavorn},
 year = {2016},
 howpublished = {\url{https://cran.r-project.org/web/packages/ScottKnottESD/index.html}}
 }
-
+```
 The detailed description of ScottKnottESD is described in:
-
+```tex
 @article{tantithamthavorn2016mvt,
   title={{An Empirical Comparison of Model Validation Techniques for Defect Prediction Model}},
   author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E and Matsumoto, Kenichi},
