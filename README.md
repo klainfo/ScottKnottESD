@@ -8,12 +8,12 @@ An enhancement of the Scott-Knott test (which cluster distributions into statist
 
 
 ### Install
-from CRAN:
+######  Install the current release from CRAN::
 ```r
 install.packages("ScottKnottESD")
 ```
 
-from github:
+###### Install the development version from GitHub:
 ```r
 install.packages("devtools")
 devtools::install_github("klainfo/ScottKnottESD")
@@ -27,7 +27,7 @@ sk$groups    # Corrected Groups with effect size wise
 sk$reverse   # Reversed Groups
 ```
 
-### Reference
+### References
 ```tex
 @misc{ScottKnottESD,
 title = {{ScottKnottESD: The Scott-Knott Effect Size Difference (ESD) Test}},
