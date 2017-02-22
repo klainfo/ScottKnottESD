@@ -40,11 +40,14 @@ howpublished = {\url{https://cran.r-project.org/web/packages/ScottKnottESD/index
 ```
 The detailed description of ScottKnottESD is described in:
 ```tex
-@article{tantithamthavorn2016mvt,
-  title={{An Empirical Comparison of Model Validation Techniques for Defect Prediction Model}},
-  author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E and Matsumoto, Kenichi},
-  journal={IEEE Transactions on Software Engineering (TSE)},
-  year={2016}
+@article{tantithamthavorn2017tse,
+    Author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E. and Matsumoto, Kenichi},
+    Title = {An Empirical Comparison of Model Validation Techniques for Defect Prediction Models},
+    Booktitle = {IEEE Transactions on Software Engineering (TSE)},
+    Volumn = {43},
+    Number = {1},
+    page = {1–18},
+    Year = {2017}
 }
 ```
 
