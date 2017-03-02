@@ -53,6 +53,6 @@ The detailed description of ScottKnottESD is described in:
 
 ### ScottKnottESD is referenced by the following papers
 
-- Kabinna et al. ["Examining the stability of logging statements."](https://users.encs.concordia.ca/~shang/pubs/SANER2016.pdf) Proceedings of the IEEE 23rd International Conference on Software Analysis, Evolution, and Reengineering (SANER), 2016.
-- Tantithamthavorn et al. ["An Empirical Comparison of Model Validation Techniques for Defect Prediction Models."](http://chakkrit.com/assets/papers/tantithamthavorn2016mvt.pdf) IEEE Transactions on Software Engineering (TSE), 2016.
+- Tantithamthavorn et al. ["An Empirical Comparison of Model Validation Techniques for Defect Prediction Models."](http://chakkrit.com/assets/papers/tantithamthavorn2016mvt.pdf) IEEE Transactions on Software Engineering (TSE), 2017.
 - Tantithamthavorn et al. ["Automated parameter optimization of classification techniques for defect prediction models."](http://chakkrit.com/assets/papers/tantithamthavorn2016icse.pdf) Proceedings of the 38th International Conference on Software Engineering (ICSE), 2016.
+- Kabinna et al. ["Examining the stability of logging statements."](https://users.encs.concordia.ca/~shang/pubs/SANER2016.pdf) Proceedings of the IEEE 23rd International Conference on Software Analysis, Evolution, and Reengineering (SANER), 2016.
