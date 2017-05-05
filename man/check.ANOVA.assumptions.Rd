@@ -18,7 +18,7 @@ check.ANOVA.assumptions(x, alpha = 0.05, ...)
 A wide-format data frame.
 }
 \description{
-Check basic ANOVA assumptions
+Check the normality assumption of the input dataset using the Shapiro test and the homogeneity of variances assumption of the input dataset using the Levene's test.
 }
 \examples{
 check.ANOVA.assumptions(example)

@@ -68,7 +68,7 @@ ScottKnottESD can be referenced as:
     Booktitle = {IEEE Transactions on Software Engineering (TSE)},
     Volumn = {43},
     Number = {1},
-    page = {1–18},
+    page = {1--18},
     Year = {2017}
 }
 @misc{ScottKnottESD,
