@@ -12,9 +12,9 @@ An enhancement of the Scott-Knott test (which cluster distributions into statist
 \tabular{ll}{
 Package: \tab ScottKnottESD\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2016-08-08\cr
-License: \tab MIT\cr
+Version: \tab 1.2\cr
+Date: \tab 2017-05-04\cr
+License: \tab GPL (>= 2)\cr
 }
 
 }
@@ -24,7 +24,8 @@ Chakkrit (Kla) Tantithamthavorn
 Maintainer: Chakkrit (Kla) Tantithamthavorn <kla@chakkrit.com>
 }
 \references{
--
+Chakkrit Tantithamthavorn, Shane McIntosh, Ahmed E. Hassan, Kenichi Matsumoto:
+An Empirical Comparison of Model Validation Techniques for Defect Prediction Models. IEEE Transactions on Software Engineering. 43(1): 1-18 (2017).
 }
 
 \keyword{ ScottKnottESD }

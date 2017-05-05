@@ -17,4 +17,3 @@ The sk.esd ranks
 \description{
 S3 method to print sk_esd objects.
 }
-

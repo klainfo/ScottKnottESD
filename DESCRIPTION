@@ -1,8 +1,8 @@
 Package: ScottKnottESD
 Type: Package
 Title: The Scott-Knott Effect Size Difference (ESD) Test
-Version: 1.1
-Date: 2016-08-08
+Version: 1.2
+Date: 2017-05-04
 Author: Chakkrit Tantithamthavorn
 Maintainer: Chakkrit Tantithamthavorn <kla@chakkrit.com>
 Description: An enhancement of the Scott-Knott test (which cluster distributions
@@ -16,4 +16,4 @@ Depends:
 LazyData: true
 URL: https://github.com/klainfo/ScottKnottESD
 BugReports: https://github.com/klainfo/ScottKnottESD/issues
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

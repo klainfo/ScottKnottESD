@@ -2,16 +2,18 @@
 % Please edit documentation in R/sk_esd.R
 \name{"sk_esd"}
 \alias{"sk_esd"}
-\alias{SK.ESD}
 \alias{sk_esd}
+\alias{SK.ESD}
 \title{The Scott-Knott Effect Size Difference (ESD) Test}
 \usage{
-sk_esd(x, long = FALSE, ...)
+sk_esd(x, long = FALSE, alpha = 0.05, ...)
 }
 \arguments{
 \item{x}{A wide-format data frame.}
 
 \item{long}{TRUE if the input data is a long-format.}
+
+\item{alpha}{The significance level.}
 
 \item{...}{Optional parameters.}
 }
@@ -33,4 +35,3 @@ sk <- sk_esd(melt(example), long=TRUE) # Example command for a long format
 \author{
 Chakkrit Tantithamthavorn (kla@chakkrit.com)
 }
-

@@ -38,7 +38,7 @@ year = {2016},
 howpublished = {\url{https://cran.r-project.org/web/packages/ScottKnottESD/index.html}}
 }
 ```
-The detailed description of ScottKnottESD is described in:
+The detailed description of the ScottKnottESD test is described in:
 ```tex
 @article{tantithamthavorn2017tse,
     Author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E. and Matsumoto, Kenichi},
@@ -51,7 +51,7 @@ The detailed description of ScottKnottESD is described in:
 }
 ```
 
-### ScottKnottESD is referenced by the following papers
+### The ScottKnottESD test is referenced by the following papers
 
 - Tantithamthavorn et al. ["An Empirical Comparison of Model Validation Techniques for Defect Prediction Models."](http://chakkrit.com/assets/papers/tantithamthavorn2016mvt.pdf) IEEE Transactions on Software Engineering (TSE), 2017.
 - Tantithamthavorn et al. ["Automated parameter optimization of classification techniques for defect prediction models."](http://chakkrit.com/assets/papers/tantithamthavorn2016icse.pdf) Proceedings of the 38th International Conference on Software Engineering (ICSE), 2016.
