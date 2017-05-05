@@ -6,9 +6,9 @@
 # ScottKnottESD 
 The Scott-Knott Effect Size Difference (ESD) test is an enhancement of the Scott-Knott test (which clusters distributions into statistically distinct ranks) that takes effect size into consideration [Tantithamthavorn et al., (2017) <http://dx.doi.org/10.1109/TSE.2016.2584050>].
 
-### Example usage scenarios in software engineering domain
+### Example usage scenarios in software engineering domain.
 
-#### (1) Ranking and identifying the most influential variables that are produced by random forests models or regression models
+#### (1) Ranking and identifying the most influential variables that are produced by random forests models or regression models.
 
 - Kabinna et al. ["Examining the stability of logging statements."](https://users.encs.concordia.ca/~shang/pubs/SANER2016.pdf) Proceedings of the International Conference on Software Analysis, Evolution, and Reengineering (SANER), 2016.
 
@@ -18,7 +18,7 @@ The Scott-Knott Effect Size Difference (ESD) test is an enhancement of the Scott
 
 - Tantithamthavorn et al. ["The impact of mislabelling on the performance and interpretation of defect prediction models."](http://chakkrit.com/assets/papers/tantithamthavorn2015icse.pdf) Proceedings of the International Conference on Software Engineering (ICSE), 2015.
 
-#### (2) Ranking and identifying the top-performing feature selection, classification, and model validation techniques for defect prediction models
+#### (2) Ranking and identifying the top-performing feature selection, classification, and model validation techniques for defect prediction models.
 
 - Rajbahadur et al. ["The Impact Of Using Regression Models to Build Defect Classifiers."](http://sail.cs.queensu.ca/Downloads/MSR2017_TheImpactOfUsingRegressionModelsToBuildDefectClassifiers.pdf) Proceedings of the International Conference on Mining Software Repositories (MSR), 2017.
 
@@ -30,7 +30,7 @@ The Scott-Knott Effect Size Difference (ESD) test is an enhancement of the Scott
 
 - Ghotra et al. ["Revisiting the impact of classification techniques on the performance of defect prediction models."](http://sail.cs.queensu.ca/Downloads/ICSE2015_RevisitingTheImpactOfClassificationTechniquesOnThePerformanceOfDefectPredictionModels.pdf) Proceedings of the International Conference on Software Engineering (ICSE), 2015.
 
-#### (3) Ranking and identifying the most frequent developer search tasks
+#### (3) Ranking and identifying the most frequent developer search tasks.
 
 - Xia et al. ["What do developers search for on the web?"](http://sail.cs.queensu.ca/Downloads/EMSE2017_WhatDoDevelopersSearchForOnTheWeb.pdf) Empirical Software Engineering (2017): 1-37.
 
