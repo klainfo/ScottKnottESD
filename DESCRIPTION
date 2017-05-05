@@ -5,7 +5,7 @@ Version: 1.2
 Date: 2017-05-04
 Author: Chakkrit Tantithamthavorn
 Maintainer: Chakkrit Tantithamthavorn <kla@chakkrit.com>
-Description: An enhancement of the Scott-Knott test (which cluster distributions
+Description: An enhancement of the Scott-Knott test (which clusters distributions
     into statistically distinct ranks) that takes effect size into consideration.
 License: GPL (>= 2)
 Depends:
