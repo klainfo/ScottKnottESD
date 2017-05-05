@@ -2,16 +2,16 @@
 % Please edit documentation in R/sk_esd.R
 \name{"sk_esd"}
 \alias{"sk_esd"}
-\alias{SK.ESD}
 \alias{sk_esd}
+\alias{SK.ESD}
 \title{The Scott-Knott Effect Size Difference (ESD) Test}
 \usage{
-sk_esd(x, long = FALSE, ...)
+sk_esd(x, alpha = 0.05, ...)
 }
 \arguments{
 \item{x}{A wide-format data frame.}
 
-\item{long}{TRUE if the input data is a long-format.}
+\item{alpha}{The significance level.}
 
 \item{...}{Optional parameters.}
 }
@@ -27,10 +27,12 @@ sk$original  # Original Groups
 sk$groups    # Corrected Groups with effect size wise
 sk$reverse   # Reversed Groups
 
-sk <- sk_esd(melt(example), long=TRUE) # Example command for a long format
+# For a long-format data frame
+long <- melt(example, id.vars=0)
+data <- long2wide(long)
+sk <- sk_esd(data) 
 
 }
 \author{
 Chakkrit Tantithamthavorn (kla@chakkrit.com)
 }
-

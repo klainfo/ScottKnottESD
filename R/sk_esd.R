@@ -6,7 +6,7 @@
 #' @author Chakkrit Tantithamthavorn (kla@chakkrit.com)
 #' 
 #' @param x A wide-format data frame.
-#' @param long TRUE if the input data is a long-format.
+#' @param alpha The significance level.
 #' @param ... Optional parameters.
 #' 
 #' @return A sk_esd object.
@@ -17,7 +17,10 @@
 #' sk$groups    # Corrected Groups with effect size wise
 #' sk$reverse   # Reversed Groups
 #' 
-#' sk <- sk_esd(melt(example), long=TRUE) # Example command for a long format
+#' # For a long-format data frame
+#' long <- melt(example, id.vars=0)
+#' data <- long2wide(long)
+#' sk <- sk_esd(data) 
 #' 
 #' @import ScottKnott 
 #' @import reshape2 
@@ -26,24 +29,19 @@
 #' @rdname sk_esd
 #' @aliases SK.ESD
 #' @export 
-"sk_esd" <- function(x, long=FALSE, ...){
-    if(long){
-        tmp <- do.call(cbind, split(x, x$variable))  
-        tmp <- tmp[,grep("value",names(tmp))]
-        names(tmp) <- gsub(".value", "", names(tmp))
-        x <- tmp
-    }
+"sk_esd" <- function(x, alpha=0.05, ...){
+    
     x <- data.frame(x)
     
-    transformLog  <- function(y){ y <- log1p(y)}
-    x <- data.frame(apply(x, 2, transformLog))
-    
-    av <- stats::aov(value ~ variable, data=reshape2::melt(x)) 
-    sk <- ScottKnott::SK(av, which='variable',  dispersion='s', sig.level=0.05) 
+    # apply ANOVA and Scott-Knott test
+    av <- stats::aov(value ~ variable, data=reshape2::melt(x, id.vars=0 )) 
+    sk <- ScottKnott::SK(av, which='variable',  dispersion='s', sig.level=alpha) 
     sk$original <- sk$groups; names(sk$original) <- rownames(sk$m.inf)
     ranking <- sk$groups; names(ranking) <- rownames(sk$m.inf)
     sk$diagnosis <- NULL
     keys <- names(ranking)    
+    
+    # join groups with negligible effect sizes
     for(k in seq(2,length(keys)) ){
         eff <- unlist(effsize::cohen.d(x[,keys[k]], x[,keys[k-1]])[c("magnitude","estimate")])
         sk$diagnosis <- rbind(sk$diagnosis,c(sprintf("[%d] %s (%.3f)",ranking[k-1],keys[k-1], mean(x[,keys[k-1]])),sprintf("[%d] %s (%.3f)",ranking[k],keys[k], mean(x[,keys[k]])),eff)) 
