@@ -72,9 +72,9 @@ ScottKnottESD can be referenced as:
     Year = {2017}
 }
 @misc{ScottKnottESD,
-title = {{ScottKnottESD: The Scott-Knott Effect Size Difference (ESD) Test}},
-author = {Chakkrit Tantithamthavorn},
-year = {2017},
-howpublished = {\url{https://cran.r-project.org/web/packages/ScottKnottESD/index.html}}
+    title = {{ScottKnottESD: The Scott-Knott Effect Size Difference (ESD) Test}},
+    author = {Tantithamthavorn, Chakkrit},
+    year = {2017},
+    howpublished = {\url{https://cran.r-project.org/web/packages/ScottKnottESD/index.html}}
 }
 ```
