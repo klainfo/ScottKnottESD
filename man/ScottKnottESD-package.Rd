@@ -33,8 +33,18 @@ An Empirical Comparison of Model Validation Techniques for Defect Prediction Mod
 -
 }
 \examples{
+library(ScottKnottESD)
+
+# Example dataset
+example
+
+# Check basic ANOVA assumptions
+check.ANOVA.assumptions(example)
+
 sk <- sk_esd(example)
 sk$original  # Original Groups
 sk$groups    # Corrected Groups with effect size wise
 sk$reverse   # Reversed Groups
+
+
 }

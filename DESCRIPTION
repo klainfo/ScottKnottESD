@@ -12,7 +12,8 @@ Depends:
     ScottKnott,
     reshape2,
     effsize,
-    stats    
+    stats,
+    car
 LazyData: true
 URL: https://github.com/klainfo/ScottKnottESD
 BugReports: https://github.com/klainfo/ScottKnottESD/issues

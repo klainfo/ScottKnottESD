@@ -6,7 +6,6 @@
 #' @author Chakkrit Tantithamthavorn (kla@chakkrit.com)
 #' 
 #' @param x A wide-format data frame.
-#' @param long TRUE if the input data is a long-format.
 #' @param alpha The significance level.
 #' @param ... Optional parameters.
 #' 
@@ -18,7 +17,10 @@
 #' sk$groups    # Corrected Groups with effect size wise
 #' sk$reverse   # Reversed Groups
 #' 
-#' sk <- sk_esd(melt(example), long=TRUE) # Example command for a long format
+#' # For a long-format data frame
+#' long <- melt(example, id.vars=0)
+#' data <- long2wide(long)
+#' sk <- sk_esd(data) 
 #' 
 #' @import ScottKnott 
 #' @import reshape2 
@@ -27,15 +29,8 @@
 #' @rdname sk_esd
 #' @aliases SK.ESD
 #' @export 
-"sk_esd" <- function(x, long=FALSE, alpha=0.05, ...){
+"sk_esd" <- function(x, alpha=0.05, ...){
     
-    # Convert data from long format to wide format
-    if(long){
-        tmp <- do.call(cbind, split(x, x$variable))  
-        tmp <- tmp[,grep("value",names(tmp))]
-        names(tmp) <- gsub(".value", "", names(tmp))
-        x <- tmp
-    }
     x <- data.frame(x)
     
     # apply ANOVA and Scott-Knott test
