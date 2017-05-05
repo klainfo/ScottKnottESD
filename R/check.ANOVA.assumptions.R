@@ -1,7 +1,7 @@
 #' @name "check.ANOVA.assumptions"
 #' @title Check basic ANOVA assumptions
 #'
-#' @description  Check basic ANOVA assumptions
+#' @description  Check the normality assumption of the input dataset using the Shapiro test and the homogeneity of variances assumption of the input dataset using the Levene's test.
 #'
 #' @author Chakkrit Tantithamthavorn (kla@chakkrit.com)
 #' 
@@ -29,7 +29,7 @@
     
     # Only produce warnings when the input data does not meet the basic ANOVA assumptions.
     if(length(normality.pvalue[normality.pvalue < alpha]) > 0 | homogeneity.pvalue < alpha){
-        message("WARNING: The input data does not meet the basic Scott-Knott test assumptions. The results should be interpreted with caution.")
+        message("WARNING: The input data does not meet the basic ANOVA assumptions. The results should be interpreted with caution.")
         if(length(normality.pvalue[normality.pvalue < alpha]) > 0){
             # p-value > alpha = the distributions are normal. We fail to reject H0.
             # p-value < alpha = the distributions are non-normality. 
@@ -39,7 +39,9 @@
         if(homogeneity.pvalue < alpha){
             # p-value > alpha = the variances among treatments are homogeneous. We fail to reject H0.
             # p-value < alpha = the variances among treatments are not homogeneous.
-            message(paste0("[-] The variances among treatments/variables are not homogeneous.","(p=",round(homogeneity.pvalue,4),")"))
+            message(paste0("[-] The variances among variables are not homogeneous.","(p=",round(homogeneity.pvalue,4),")"))
         }
+    }else{
+        print("The input data meets the basic ANOVA assumptions.")
     }
 }
