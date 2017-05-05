@@ -4,12 +4,11 @@
 [![DOI](https://zenodo.org/badge/39927952.svg)](https://zenodo.org/badge/latestdoi/39927952)
 
 # ScottKnottESD 
-The Scott-Knott Effect Size Difference (ESD) Test is an enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
+The Scott-Knott Effect Size Difference (ESD) test is an enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
 
-### Usage scenarios in software engineering domain
+### Example usage scenarios in software engineering domain
 
-#### Ranking and identifying the most influential variables
-
+#### (1) Ranking and identifying the most influential variables that are produced by random forests models or regression models
 
 - Kabinna et al. ["Examining the stability of logging statements."](https://users.encs.concordia.ca/~shang/pubs/SANER2016.pdf) Proceedings of the International Conference on Software Analysis, Evolution, and Reengineering (SANER), 2016.
 
@@ -19,13 +18,21 @@ The Scott-Knott Effect Size Difference (ESD) Test is an enhancement of the Scott
 
 - Tantithamthavorn et al. ["The impact of mislabelling on the performance and interpretation of defect prediction models."](http://chakkrit.com/assets/papers/tantithamthavorn2015icse.pdf) Proceedings of the International Conference on Software Engineering (ICSE), 2015.
 
-#### Ranking and identifying the top-performing classification techniques for defect prediction models
+#### (2) Ranking and identifying the top-performing feature selection, classification, and model validation techniques for defect prediction models
+
+- Rajbahadur et al. ["The Impact Of Using Regression Models to Build Defect Classifiers."](http://sail.cs.queensu.ca/Downloads/MSR2017_TheImpactOfUsingRegressionModelsToBuildDefectClassifiers.pdf) Proceedings of the International Conference on Mining Software Repositories (MSR), 2017.
+
+- Ghotra et al. ["A Large-Scale Study of the Impact of Feature Selection Techniques on Defect Classification Models"](http://sail.cs.queensu.ca/Downloads/MSR2017_ALarge-ScaleStudyOfTheImpactOfFeatureSelectionTechniquesOnDefectClassificationModels.pdf) Proceedings of the International Conference on Mining Software Repositories (MSR), 2017.
 
 - Tantithamthavorn et al. ["An Empirical Comparison of Model Validation Techniques for Defect Prediction Models."](http://chakkrit.com/assets/papers/tantithamthavorn2016mvt.pdf) IEEE Transactions on Software Engineering (TSE), 2017.
 
 - Tantithamthavorn et al. ["Automated parameter optimization of classification techniques for defect prediction models."](http://chakkrit.com/assets/papers/tantithamthavorn2016icse.pdf) Proceedings of the 38th International Conference on Software Engineering (ICSE), 2016.
 
 - Ghotra et al. ["Revisiting the impact of classification techniques on the performance of defect prediction models."](http://sail.cs.queensu.ca/Downloads/ICSE2015_RevisitingTheImpactOfClassificationTechniquesOnThePerformanceOfDefectPredictionModels.pdf) Proceedings of the International Conference on Software Engineering (ICSE), 2015.
+
+#### (3) Ranking and identifying the most frequent developer search tasks
+
+- Xia et al. ["What do developers search for on the web?"](http://sail.cs.queensu.ca/Downloads/EMSE2017_WhatDoDevelopersSearchForOnTheWeb.pdf) Empirical Software Engineering (2017): 1-37.
 
 ### Installation
 ######  Install the current release from CRAN::
@@ -55,15 +62,6 @@ sk$reverse   # Reversed Groups
 ### Referencing ScottKnottESD
 ScottKnottESD can be referenced as:
 ```tex
-@misc{ScottKnottESD,
-title = {{ScottKnottESD: The Scott-Knott Effect Size Difference (ESD) Test}},
-author = {Chakkrit Tantithamthavorn},
-year = {2017},
-howpublished = {\url{https://cran.r-project.org/web/packages/ScottKnottESD/index.html}}
-}
-```
-The detailed description of the ScottKnottESD test is described in:
-```tex
 @article{tantithamthavorn2017tse,
     Author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E. and Matsumoto, Kenichi},
     Title = {An Empirical Comparison of Model Validation Techniques for Defect Prediction Models},
@@ -72,5 +70,11 @@ The detailed description of the ScottKnottESD test is described in:
     Number = {1},
     page = {1–18},
     Year = {2017}
+}
+@misc{ScottKnottESD,
+title = {{ScottKnottESD: The Scott-Knott Effect Size Difference (ESD) Test}},
+author = {Chakkrit Tantithamthavorn},
+year = {2017},
+howpublished = {\url{https://cran.r-project.org/web/packages/ScottKnottESD/index.html}}
 }
 ```
