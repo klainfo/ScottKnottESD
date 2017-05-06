@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/klainfo/ScottKnottESD.svg?branch=master)](https://travis-ci.org/klainfo/ScottKnottESD) 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ScottKnottESD)](http://cran.r-project.org/web/packages/ScottKnottESD)
-[![Downloads](http://cranlogs.r-pkg.org/badges/ScottKnottESD)](https://cran.rstudio.com/web/packages/ScottKnottESD/index.html)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ScottKnottESD)](https://cran.r-project.org/package=ScottKnottESD)
+[![Downloads](http://cranlogs.r-pkg.org/badges/ScottKnottESD)]( https://cran.r-project.org/package=ScottKnottESD)
 [![DOI](https://zenodo.org/badge/39927952.svg)](https://zenodo.org/badge/latestdoi/39927952)
 
 # ScottKnottESD 
@@ -75,6 +75,6 @@ ScottKnottESD can be referenced as:
     title = {{ScottKnottESD: The Scott-Knott Effect Size Difference (ESD) Test}},
     author = {Tantithamthavorn, Chakkrit},
     year = {2017},
-    howpublished = {\url{http://cran.r-project.org/web/packages/ScottKnottESD/}}
+    howpublished = {\url{https://cran.r-project.org/package=ScottKnottESD}}
 }
 ```
