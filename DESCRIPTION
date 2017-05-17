@@ -15,6 +15,8 @@ Depends:
     effsize,
     stats,
     car
+Imports:
+    forecast
 LazyData: true
 URL: https://github.com/klainfo/ScottKnottESD
 BugReports: https://github.com/klainfo/ScottKnottESD/issues

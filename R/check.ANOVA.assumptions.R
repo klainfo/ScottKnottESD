@@ -16,7 +16,6 @@
 #' 
 #' @import car
 #' @import stats
-#' @import nortest
 #' @rdname check.ANOVA.assumptions
 #' @export 
 "check.ANOVA.assumptions" <- function(x, alpha=0.05, ...){

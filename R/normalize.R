@@ -14,6 +14,7 @@
 #' normalized.data <- normalize(example)
 #' 
 #' @import car
+#' @import forecast
 #' @rdname normalize
 #' @export 
 normalize <- function(x, ...){
