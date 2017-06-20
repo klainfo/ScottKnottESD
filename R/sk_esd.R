@@ -43,9 +43,10 @@
     
     # join groups with negligible effect sizes
     for(k in seq(2,length(keys)) ){
-        eff <- unlist(effsize::cohen.d(x[,keys[k]], x[,keys[k-1]])[c("magnitude","estimate")])
-        sk$diagnosis <- rbind(sk$diagnosis,c(sprintf("[%d] %s (%.3f)",ranking[k-1],keys[k-1], mean(x[,keys[k-1]])),sprintf("[%d] %s (%.3f)",ranking[k],keys[k], mean(x[,keys[k]])),eff)) 
-        if(eff["magnitude"] == "negligible" && ranking[k] != ranking[k-1]){ranking[seq(k,length(keys))] = ranking[seq(k,length(keys))] - 1;}
+        magnitude <- effsize::cohen.d(x[,keys[k]], x[,keys[k-1]])$magnitude
+        estimate <- effsize::cohen.d(x[,keys[k]], x[,keys[k-1]])$estimate
+        sk$diagnosis <- rbind(sk$diagnosis,c(sprintf("[%d] %s (%.3f)",ranking[k-1],keys[k-1], mean(x[,keys[k-1]])),sprintf("[%d] %s (%.3f)",ranking[k],keys[k], mean(x[,keys[k]])),as.character(magnitude), estimate)) 
+        if(magnitude == "negligible" && ranking[k] != ranking[k-1]){ranking[seq(k,length(keys))] = ranking[seq(k,length(keys))] - 1;}
     }
     sk$groups <- ranking
     sk$reverse <- max(ranking)-ranking+1

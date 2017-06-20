@@ -1,7 +1,7 @@
 Package: ScottKnottESD
 Type: Package
 Title: The Scott-Knott Effect Size Difference (ESD) Test
-Version: 1.2.2
+Version: 1.3
 Date: 2017-05-07
 Author: Chakkrit Tantithamthavorn
 Maintainer: Chakkrit Tantithamthavorn <kla@chakkrit.com>
@@ -15,6 +15,8 @@ Depends:
     effsize,
     stats,
     car
+Imports:
+    forecast
 LazyData: true
 URL: https://github.com/klainfo/ScottKnottESD
 BugReports: https://github.com/klainfo/ScottKnottESD/issues
