@@ -1,1 +1,1 @@
- SK.ESD <- function(x, ...) UseMethod("sk_esd")
+SK.ESD <- function(x, ...) UseMethod("sk_esd")
