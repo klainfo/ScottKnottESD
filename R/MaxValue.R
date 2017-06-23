@@ -13,8 +13,8 @@
 ## mean it becomes itself a group of one element, the algorithm continues to
 ## the former group.
 ## In the end, each node without children represents a group of means.
-
-MaxValue <- function(g,
+#' @export 
+Partition <- function(g,
                      means,
                      mMSE,
                      dfr,
@@ -120,7 +120,7 @@ MaxValue <- function(g,
         g <- ord1
     }
     
-    MaxValue(g,
+    Partition(g,
              means,
              mMSE,
              dfr,

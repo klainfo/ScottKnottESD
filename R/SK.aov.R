@@ -1,8 +1,5 @@
-##
-## S3 method to 'aov' object
-##
-
-SK.aov <- function(x,
+#' @export 
+scottknott <- function(x,
                    which=NULL,
                    id.trim=3,
                    sig.level=.05,
@@ -41,7 +38,7 @@ SK.aov <- function(x,
 
   g    <- nrow(m.inf)
 
-  groups <- MaxValue(g,
+  groups <- Partition(g,
                      m.inf[, 1],
                      mMSE,
                      dfr,
