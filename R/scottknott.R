@@ -56,7 +56,7 @@ scottknott <- function(x,
               m.inf=m.inf,
               sig.level=sig.level)
 
-  class(res) <- c('SK',
+  class(res) <- c('sk_esd',
                   'list')
 
   invisible(res)

@@ -1,8 +1,5 @@
-##
-## S3 method to plot 'SK' object
-##
-
-plot.SK <- function(x,
+#' @export 
+plot.sk_esd <- function(x,
                     pch=19,
                     col=NULL,
                     xlab=NULL,
@@ -19,7 +16,7 @@ plot.SK <- function(x,
                     mm.lty=1, 
                     title="Means grouped by color(s)", ...)
 {
-  if(!inherits(x, 'SK'))
+  if(!inherits(x, 'sk_esd'))
     stop("Use only with 'SK' objects!")
 
   if(!is.null(col))  
