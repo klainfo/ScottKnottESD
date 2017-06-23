@@ -43,7 +43,7 @@ install.packages("ScottKnottESD")
 ###### Install the development version from GitHub:
 ```r
 install.packages("devtools")
-devtools::install_github("klainfo/ScottKnottESD")
+devtools::install_github("klainfo/ScottKnottESD", ref="development")
 ```
 ### Example Usage
 ```r
