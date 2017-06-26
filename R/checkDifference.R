@@ -16,6 +16,11 @@ checkDifference <- function(ranking, data){
         }
     }
     rownames(eff) <- NULL
+    
+    a <- eff[eff$ranki == eff$rankj & eff$mag != "negligible",] # Within-group pairs with neg. diff
+    b <- eff[eff$ranki != eff$rankj & eff$mag == "negligible",]  #Inter-group pairs with neg. diff
+    # if(a != TRUE)
+    
     return(eff)
 }
 

@@ -21,15 +21,8 @@ A sk_esd object.
 An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
 }
 \examples{
-sk <- sk_esd(example)
-sk$original  # Original Groups
-sk$groups    # Corrected Groups with effect size wise
-sk$reverse   # Reversed Groups
+sk <- sk_esd(maven)
 
-# For a long-format data frame
-long <- melt(example, id.vars=0)
-data <- long2wide(long)
-sk <- sk_esd(data) 
 
 }
 \author{

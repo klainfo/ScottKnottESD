@@ -12,19 +12,10 @@
 #' @return A sk_esd object.
 #' 
 #' @examples
-#' sk <- sk_esd(example)
-#' sk$original  # Original Groups
-#' sk$groups    # Corrected Groups with effect size wise
-#' sk$reverse   # Reversed Groups
+#' sk <- sk_esd(maven)
 #' 
-#' # For a long-format data frame
-#' long <- melt(example, id.vars=0)
-#' data <- long2wide(long)
-#' sk <- sk_esd(data) 
 #' 
 #' @import reshape2 
-#' @import effsize 
-#' @import stats 
 #' @rdname sk_esd
 #' @aliases SK.ESD
 #' @export 

@@ -1,3 +1,4 @@
+#' @importFrom graphics plot segments axis mtext
 #' @export 
 plot.sk_esd <- function(x,
                     pch=19,
