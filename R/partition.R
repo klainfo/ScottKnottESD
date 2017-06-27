@@ -49,9 +49,11 @@ Partition <- function(g,
             for(j in (i+1):g){
                 a <- av$model[av$model[,2] == names(means[k]),1]
                 b <- av$model[av$model[,2] == names(means[g]),1]   
-                magnitude <- as.character(cohen.d(a,b)$magnitude)
-                if(magnitude != "negligible"){
-                    negligible <- FALSE
+                if(a != b){
+                    magnitude <- as.character(cohen.d(a,b)$magnitude)
+                    if(magnitude != "negligible"){
+                        negligible <- FALSE
+                    }
                 }
             }
         }
