@@ -54,9 +54,10 @@ library(ScottKnottESD)
 example
 
 sk <- sk_esd(example)
-sk$original  # Original Groups
-sk$groups    # Corrected Groups with effect size wise
-sk$reverse   # Reversed Groups
+plot(sk)
+
+sk <- sk_esd(maven)
+plot(sk)
 ```
 
 ### Referencing ScottKnottESD
