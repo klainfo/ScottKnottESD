@@ -1,3 +1,7 @@
+# This is a modified version of https://github.com/jcfaria/ScottKnott/blob/master/R/SK.aov.R which is originally written by Jose Claudio Faria
+# Change Notes:
+# - Add an 'av' arguemtn for the partition() function
+
 scottknott <- function(x,
                    which=NULL,
                    id.trim=3,

@@ -1,18 +1,9 @@
-## The function MaxValue builds groups of means, according to the method of
-## Scott & Knott.
-## Basically it is an algorithm for pre-order path in binary decision tree.
-## Every node of this tree, represents a different group of means
-## and, when the algorithm reaches this node it takes the decision to either
-## split the group in two, or form a group of means.
-## If the decision is to divide then this node generates two children and the
-## algorithm follows for the node on the left, if, on the other hand, the
-## decision is to form a group, then it returns to the parent node of that
-## node and follows to the right node.
-## In this way it follows until the last group is formed, the one containing
-## the highest (or the least) mean. In the case the highest (or the least)
-## mean it becomes itself a group of one element, the algorithm continues to
-## the former group.
-## In the end, each node without children represents a group of means.
+# This is a modified version of https://github.com/jcfaria/ScottKnott/blob/master/R/MaxValue.R which is originally written by Jose Claudio Faria
+# Change Notes:
+# - Add an 'av' argument into the Partition() function
+# - Remove the calculation of a lamdaa and a Chi-square distribution
+# - Use Cohen d to check the effect size difference with the diff() function
+
 #' @import effsize 
 Partition <- function(g,
                      means,
