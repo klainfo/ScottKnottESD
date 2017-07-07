@@ -3,8 +3,17 @@
 [![Downloads](http://cranlogs.r-pkg.org/badges/ScottKnottESD)]( https://cran.r-project.org/package=ScottKnottESD)
 [![DOI](https://zenodo.org/badge/39927952.svg)](https://zenodo.org/badge/latestdoi/39927952)
 
-# ScottKnottESD 
-The Scott-Knott Effect Size Difference (ESD) test is an enhancement of the Scott-Knott test (which clusters distributions into statistically distinct ranks) that takes effect size into consideration [Tantithamthavorn et al., (2017) <http://dx.doi.org/10.1109/TSE.2016.2584050>].
+# ScottKnottESD (v2.x) 
+The Scott-Knott Effect Size Difference (ESD) test is a mean comparison approach that leverages a hierarchical clustering to partition the set of treatment means (e.g., means of variable importance scores, means of model performance) into statistically distinct groups with non-negligible difference [Tantithamthavorn et al., (2017) <http://dx.doi.org/10.1109/TSE.2016.2584050>].
+It is an alternative approach of the Scott-Knott test that considers the magnitude of the difference (i.e., effect size) of treatment means with-in a group and between groups.
+Therefore, the Scott-Knott ESD test (v2.x) produces the ranking of treatment means while ensuring that (1) the magnitude of the difference for all of the treatments in each group is negligible; and (2) the magnitude of the difference of treatments between groups is negligible.
+
+The mechanism of the Scott-Knott ESD test (v2.x) is made up of 2 steps:
+
+* **(Step 1) Find a partition that maximizes treatment means between groups.** We begin by sorting the treatment means. Then, following the original Scott-Knott test, we compute the sum of squares between groups (i.e., a dispersion measure of data points) to identify a partition that maximizes treatment means between groups. 
+* **(Step 2) Splitting into two groups or merging into one group.** Instead of using a likelihood ratio test and a Chi-square distribution as a splitting and merging criterion (i.e., a hypothesis testing of the equality of all treatment means), we analyze the magnitude of the difference for each pair for all of the treatment means of the two groups. If there is any one pair of treatment means of two groups are non-negligible, we split into two groups. Otherwise, we merge into one group. We use the Cohen effect size --- an effect size estimate based on the difference between the two means divided by the standard deviation of the two treatment means ($d = \frac{\bar{x}_1 - \bar{x}_2}{s.d.}$).
+
+Unlike the earlier version of the Scott-Knott ESD test (v1.x) that post-processes the groups that are produced by the Scott-Knott test, the Scott-Knott ESD test (v2.x) pre-processes the groups by merging pairs of statistically distinct groups that have a negligible difference.
 
 ### Example usage scenarios in software engineering domain.
 
@@ -43,7 +52,7 @@ install.packages("ScottKnottESD")
 ###### Install the development version from GitHub:
 ```r
 install.packages("devtools")
-devtools::install_github("klainfo/ScottKnottESD")
+devtools::install_github("klainfo/ScottKnottESD", ref="development")
 ```
 ### Example Usage
 ```r
@@ -54,15 +63,16 @@ library(ScottKnottESD)
 example
 
 sk <- sk_esd(example)
-sk$original  # Original Groups
-sk$groups    # Corrected Groups with effect size wise
-sk$reverse   # Reversed Groups
+plot(sk)
+
+sk <- sk_esd(maven)
+plot(sk)
 ```
 
 ### Referencing ScottKnottESD
 ScottKnottESD can be referenced as:
 ```tex
-@article{tantithamthavorn2017tse,
+@article{tantithamthavorn2017mvt,
     Author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E. and Matsumoto, Kenichi},
     Title = {An Empirical Comparison of Model Validation Techniques for Defect Prediction Models},
     Booktitle = {IEEE Transactions on Software Engineering (TSE)},
@@ -71,12 +81,10 @@ ScottKnottESD can be referenced as:
     page = {1-18},
     Year = {2017}
 }
-@misc{sk_esd,
-  author       = {Chakkrit (Kla) Tantithamthavorn},
-  title        = {klainfo/ScottKnottESD: v1.2.2},
-  month        = may,
-  year         = 2017,
-  doi          = {10.5281/zenodo.572350},
-  url          = {https://doi.org/10.5281/zenodo.572350}
+@article{tantithamthavorn2017optimization,
+    Author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E. and Matsumoto, Kenichi},
+    Title = {The Impact of Automated Parameter Optimization for Defect Prediction Models},
+    Booktitle = {Under Review at IEEE Transactions on Software Engineering (TSE)},
+    Year = {2017}
 }
 ```
