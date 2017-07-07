@@ -13,6 +13,8 @@ The mechanism of the Scott-Knott ESD test (v2.x) is made up of 2 steps:
 * **(Step 1) Find a partition that maximizes treatment means between groups.** We begin by sorting the treatment means. Then, following the original Scott-Knott test, we compute the sum of squares between groups (i.e., a dispersion measure of data points) to identify a partition that maximizes treatment means between groups. 
 * **(Step 2) Splitting into two groups or merging into one group.** Instead of using a likelihood ratio test and a Chi-square distribution as a splitting and merging criterion (i.e., a hypothesis testing of the equality of all treatment means), we analyze the magnitude of the difference for each pair for all of the treatment means of the two groups. If there is any one pair of treatment means of two groups are non-negligible, we split into two groups. Otherwise, we merge into one group. We use the Cohen effect size --- an effect size estimate based on the difference between the two means divided by the standard deviation of the two treatment means ($d = \frac{\bar{x}_1 - \bar{x}_2}{s.d.}$).
 
+Unlike the earlier version of the Scott-Knott ESD test (v1.x) that post-processes the groups that are produced by the Scott-Knott test, the Scott-Knott ESD test (v2.x) pre-processes the groups by merging pairs of statistically distinct groups that have a negligible difference.
+
 ### Example usage scenarios in software engineering domain.
 
 #### (1) Ranking and identifying the most influential variables that are produced by random forests models or regression models.
