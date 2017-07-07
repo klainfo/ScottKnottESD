@@ -2,8 +2,6 @@
 #' @title The Scott-Knott Effect Size Difference (ESD) Test
 #'
 #' @description  An enhancement of the Scott-Knott test (which cluster distributions into statistically distinct ranks) that takes effect size into consideration.
-#'
-#' @author Chakkrit Tantithamthavorn (kla@chakkrit.com)
 #' 
 #' @param x A wide-format data frame.
 #' @param alpha The significance level.

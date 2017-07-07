@@ -45,6 +45,4 @@ plot(sk)
 }
 \author{
 Chakkrit Tantithamthavorn (kla@chakkrit.com)
-
-Chakkrit Tantithamthavorn (kla@chakkrit.com)
 }

@@ -22,8 +22,8 @@ Unlike the earlier version of the Scott-Knott ESD test (v1.x) that post-processe
 \tabular{ll}{
 Package: \tab ScottKnottESD\cr
 Type: \tab Package\cr
-Version: \tab 1.3\cr
-Date: \tab 2017-05-07\cr
+Version: \tab 2.0.1\cr
+Date: \tab 2017-07-07\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -45,18 +45,9 @@ An Empirical Comparison of Model Validation Techniques for Defect Prediction Mod
 \examples{
 library(ScottKnottESD)
 
-# Example dataset
-example
-
-# Convert data from long format to wide format
-long <- melt(example, id.vars=0)
-wide <- long2wide(long) # A wide-format data frame
-
-# Check basic ANOVA assumptions
-check.ANOVA.assumptions(example)
-
 sk <- sk_esd(example)
-sk$original  # Original Groups
-sk$groups    # Corrected Groups with effect size wise
-sk$reverse   # Reversed Groups
+plot(sk)
+ 
+sk <- sk_esd(maven)
+plot(sk)
 }
