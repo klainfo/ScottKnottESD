@@ -1,6 +1,21 @@
+#' @name sk_esd
+#' @title A function to check the magnitude of the difference for all pairs of treatments
+#'
+#' @description  A function to check the magnitude of the difference for all pairs of treatments
+#'
+#' @author Chakkrit Tantithamthavorn (kla@chakkrit.com)
+#' 
+#' @param ranking A ranking that is produced by the Scott-Knott ESD test
+#' @param data a data frame of treatment means
+#' 
+#' @return A result of the magnitude of the difference for all pairs of treatments.
+#' 
+#' @examples
+#' sk <- sk_esd(example)
+#' checkDifference(sk$groups, example)
+#' 
 #' @export 
 checkDifference <- function(ranking, data){
-    library(effsize)
     eff <- data.frame()
     for(i in 1:(ncol(data)-1)){
         for(j in (i+1):ncol(data)){

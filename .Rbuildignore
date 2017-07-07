@@ -7,3 +7,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^Makefile
+^comparison/
+^sandbox/
+^sandbox.tgz

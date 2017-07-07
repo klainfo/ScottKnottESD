@@ -12,8 +12,11 @@
 #' @return A sk_esd object.
 #' 
 #' @examples
-#' sk <- sk_esd(maven)
+#' sk <- sk_esd(example)
+#' plot(sk)
 #' 
+#' sk <- sk_esd(maven)
+#' plot(sk)
 #' 
 #' @import reshape2 
 #' @rdname sk_esd

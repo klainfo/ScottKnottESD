@@ -3,7 +3,7 @@
 \docType{data}
 \name{example}
 \alias{example}
-\title{Example datasets of Breiman's variable importance scores}
+\title{An example dataset of Breiman's variable importance scores}
 \format{A data frame with 1,000 rows and 9 variables:
 \describe{
   \item{LOC}{lines of code}
