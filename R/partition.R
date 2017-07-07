@@ -13,7 +13,7 @@
 ## mean it becomes itself a group of one element, the algorithm continues to
 ## the former group.
 ## In the end, each node without children represents a group of means.
-#' @export 
+#' @import effsize 
 Partition <- function(g,
                      means,
                      mMSE,
@@ -42,7 +42,7 @@ Partition <- function(g,
     ord1 <- order(sqsum, decreasing=TRUE)[1]
     
     ############################################################
-    # Compute the magnitude of the difference of all distributions in a group
+    # Compute the magnitude of the difference of all treatments in a group
     diff <- function(k, g, av, means){
         negligible <- TRUE
         for(i in k:(g-1)){

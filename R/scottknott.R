@@ -1,4 +1,3 @@
-#' @export 
 scottknott <- function(x,
                    which=NULL,
                    id.trim=3,
