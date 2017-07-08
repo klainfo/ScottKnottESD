@@ -22,8 +22,8 @@ Unlike the earlier version of the Scott-Knott ESD test (v1.x) that post-processe
 \tabular{ll}{
 Package: \tab ScottKnottESD\cr
 Type: \tab Package\cr
-Version: \tab 2.0.1\cr
-Date: \tab 2017-07-07\cr
+Version: \tab 2.0.2\cr
+Date: \tab 2017-07-03\cr
 License: \tab GPL (>= 2)\cr
 }
 
