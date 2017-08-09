@@ -39,8 +39,8 @@ Partition <- function(g,
         for(i in k:(g-1)){
             for(j in (i+1):g){
                 a <- av$model[av$model[,2] == names(means[k]),1]
-                b <- av$model[av$model[,2] == names(means[g]),1]   
-                if(a != b){
+                b <- av$model[av$model[,2] == names(means[g]),1]  
+                if(!identical(a,b)){ # if a and b are not an identical vector
                     magnitude <- as.character(cohen.d(a,b)$magnitude)
                     if(magnitude != "negligible"){
                         negligible <- FALSE
