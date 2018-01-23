@@ -81,9 +81,11 @@ ScottKnottESD can be referenced as:
     page = {1-18},
     Year = {2017}
 }
-@article{tantithamthavorn2017optimization,
+@article{tantithamthavorn2018optimization,
     Author={Tantithamthavorn, Chakkrit and McIntosh, Shane and Hassan, Ahmed E. and Matsumoto, Kenichi},
     Title = {The Impact of Automated Parameter Optimization for Defect Prediction Models},
-    Year = {2017}
+    Booktitle = {IEEE Transactions on Software Engineering (TSE)},
+    page = {In Press},
+    Year = {2018}
 }
 ```
