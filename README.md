@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/klainfo/ScottKnottESD.svg?branch=master)](https://travis-ci.org/klainfo/ScottKnottESD) 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ScottKnottESD)](https://cran.r-project.org/package=ScottKnottESD)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ScottKnottESD)]( https://cran.r-project.org/package=ScottKnottESD)
 [![Downloads](http://cranlogs.r-pkg.org/badges/ScottKnottESD)]( https://cran.r-project.org/package=ScottKnottESD)
 [![DOI](https://zenodo.org/badge/39927952.svg)](https://zenodo.org/badge/latestdoi/39927952)
 
