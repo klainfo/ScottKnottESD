@@ -37,10 +37,15 @@ Partition <- function(g,
     # Use effect size test to identify whether to split metrics into two groups of {k:i} and {j:g}.
     # The split is accepted if effect.size({k}, {g}) != negligible
     diff <- function(k, g, av, means) {
-        a <- av$model[av$model[, 2] == names(means[k]), 1]
-        b <- av$model[av$model[, 2] == names(means[g]), 1]
-        magnitude <- as.character(cohen.d(a, b, paired=TRUE)$magnitude)
-        return (magnitude == 'negligible')
+        if(k==g){ # if k and g are the same treatment
+            return(TRUE)
+        }
+        
+        a <- av$model[av$model[,2] == names(means[k]),1]
+        b <- av$model[av$model[,2] == names(means[g]),1]  
+        
+        magnitude <- as.character(cohen.d(a,b)$magnitude)
+        return(magnitude == "negligible")
     }
     ############################################################
     
