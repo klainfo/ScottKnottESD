@@ -34,21 +34,18 @@ Partition <- function(g,
     
     ############################################################
     # Compute the magnitude of the difference of all treatments in a group
-    diff <- function(k, g, av, means){
-        negligible <- TRUE
-        for(i in k:(g-1)){
-            for(j in (i+1):g){
-                a <- av$model[av$model[,2] == names(means[k]),1]
-                b <- av$model[av$model[,2] == names(means[g]),1]  
-                if(!identical(a,b)){ # if a and b are not an identical vector
-                    magnitude <- as.character(cohen.d(a,b)$magnitude)
-                    if(magnitude != "negligible"){
-                        negligible <- FALSE
-                    }
-                }
-            }
+    # Use effect size test to identify whether to split metrics into two groups of {k:i} and {j:g}.
+    # The split is accepted if effect.size({k}, {g}) != negligible
+    diff <- function(k, g, av, means) {
+        if(k==g){ # if k and g are the same treatment
+            return(TRUE)
         }
-        return(negligible)
+        
+        a <- av$model[av$model[,2] == names(means[k]),1]
+        b <- av$model[av$model[,2] == names(means[g]),1]  
+        
+        magnitude <- as.character(cohen.d(a,b)$magnitude)
+        return(magnitude == "negligible")
     }
     ############################################################
     
