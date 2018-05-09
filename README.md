@@ -5,7 +5,7 @@
 [![DOI](https://zenodo.org/badge/39927952.svg)](https://zenodo.org/badge/latestdoi/39927952)
 
 # ScottKnottESD (v2.0.3) 
-The Scott-Knott Effect Size Difference (ESD) test is a mean comparison approach that leverages a hierarchical clustering to partition the set of treatment means (e.g., means of variable importance scores, means of model performance) into statistically distinct groups with non-negligible difference [Tantithamthavorn et al., (2018) <http://dx.doi.org/10.1109/TSE.2018.2794977>].
+The Scott-Knott Effect Size Difference (ESD) test is a mean comparison approach that leverages a hierarchical clustering to partition the set of treatment means (e.g., means of variable importance scores, means of model performance) into statistically distinct groups with non-negligible difference [Tantithamthavorn et al., (2018) <https://doi.org/10.1109/TSE.2018.2794977>].
 It is an alternative approach of the Scott-Knott test that considers the magnitude of the difference (i.e., effect size) of treatment means with-in a group and between groups.
 Therefore, the Scott-Knott ESD test (v2.x) produces the ranking of treatment means while ensuring that (1) the magnitude of the difference for all of the treatments in each group is negligible; and (2) the magnitude of the difference of treatments between groups is non-negligible.
 
