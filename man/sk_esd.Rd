@@ -3,7 +3,6 @@
 \name{sk_esd}
 \alias{sk_esd}
 \alias{checkDifference}
-\alias{sk_esd}
 \alias{SK.ESD}
 \title{A function to check the magnitude of the difference for all pairs of treatments}
 \usage{

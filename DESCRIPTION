@@ -12,9 +12,7 @@ Depends:
     effsize,
     stats,
     car
-Imports:
-    forecast
 LazyData: true
 URL: https://github.com/klainfo/ScottKnottESD
 BugReports: https://github.com/klainfo/ScottKnottESD/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
