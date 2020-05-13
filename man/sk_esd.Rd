@@ -3,13 +3,12 @@
 \name{sk_esd}
 \alias{sk_esd}
 \alias{checkDifference}
-\alias{sk_esd}
 \alias{SK.ESD}
 \title{A function to check the magnitude of the difference for all pairs of treatments}
 \usage{
 checkDifference(ranking, data)
 
-sk_esd(x, alpha = 0.05, ...)
+sk_esd(x, version = "np", alpha = 0.05, ...)
 }
 \arguments{
 \item{ranking}{A ranking that is produced by the Scott-Knott ESD test}
@@ -17,6 +16,8 @@ sk_esd(x, alpha = 0.05, ...)
 \item{data}{a data frame of treatment means}
 
 \item{x}{A wide-format data frame.}
+
+\item{version}{The version of scott-knott test. "np" = non-parametric, "p" = parametric, "o" = original}
 
 \item{alpha}{The significance level.}
 
@@ -41,6 +42,10 @@ plot(sk)
 
 sk <- sk_esd(maven)
 plot(sk)
+
+data <- read.csv("/Users/klainfo/Research/py-scottknott/maven-R.csv")
+sk_esd(data)
+
 
 }
 \author{
