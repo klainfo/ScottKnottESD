@@ -6,7 +6,7 @@ Date: 2020-05-14
 Author: Chakkrit Tantithamthavorn
 Maintainer: Chakkrit Tantithamthavorn <chakkrit@monash.edu>
 Description: The Non-Parametric Scott-Knott Effect Size Difference (ESD) test is a mean comparison approach that leverages a hierarchical clustering to partition the set of treatment means (e.g., means of variable importance scores, means of model performance) into statistically distinct groups with non-negligible difference [Tantithamthavorn et al., (2018) <doi:10.1109/TSE.2018.2794977>].
-License: GPL (>= 2)
+License: GPL (>= 2) + file LICENSE
 Depends:
     reshape2,
     effsize,
