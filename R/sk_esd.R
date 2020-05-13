@@ -17,9 +17,6 @@
 #' sk <- sk_esd(maven)
 #' plot(sk)
 #' 
-#' data <- read.csv("/Users/klainfo/Research/py-scottknott/maven-R.csv")
-#' sk_esd(data)
-#' 
 #' 
 #' @import reshape2 
 #' @rdname sk_esd
