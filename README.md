@@ -3,6 +3,7 @@
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ScottKnottESD)]( https://cran.r-project.org/package=ScottKnottESD)
 [![Downloads](http://cranlogs.r-pkg.org/badges/ScottKnottESD)]( https://cran.r-project.org/package=ScottKnottESD)
 [![DOI](https://zenodo.org/badge/39927952.svg)](https://zenodo.org/badge/latestdoi/39927952)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 # ScottKnottESD (v2.0.3) 
 The Scott-Knott Effect Size Difference (ESD) test is a mean comparison approach that leverages a hierarchical clustering to partition the set of treatment means (e.g., means of variable importance scores, means of model performance) into statistically distinct groups with non-negligible difference [Tantithamthavorn et al., (2018) <https://doi.org/10.1109/TSE.2018.2794977>].
@@ -55,7 +56,7 @@ install.packages("ScottKnottESD")
 install.packages("devtools")
 devtools::install_github("klainfo/ScottKnottESD", ref="development")
 ```
-### Example Usage
+### Example R Usage
 ```r
 library(ScottKnottESD)
 
@@ -70,6 +71,26 @@ sk <- sk_esd(maven)
 plot(sk)
 ```
 
+### Example Python Usage (by calling R package via rpy2)
+```
+# For Linux
+pip install rpy2
+
+# For Mac OS X
+env ARCHFLAGS="-arch i386 -arch x86_64" pip install rpy2
+```
+
+```
+from rpy2.robjects.packages import importr
+from rpy2.robjects import r, pandas2ri
+pandas2ri.activate()
+import pandas as pd
+
+sk = importr('ScottKnottESD')
+data = pd.read_csv("data.csv")
+r_sk = sk.sk_esd(data)
+ranking = pd.DataFrame({'columns':data.columns, 'rank':list(r_sk[1])})
+```
 ### Referencing ScottKnottESD
 ScottKnottESD can be referenced as:
 ```tex
