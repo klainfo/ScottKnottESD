@@ -3,6 +3,7 @@
 # - Add an 'av' arguemtn for the partition() function
 
 scottknott <- function(x,
+                   version,
                    which=NULL,
                    id.trim=3,
                    sig.level=.05,
@@ -41,16 +42,41 @@ scottknott <- function(x,
 
   g    <- nrow(m.inf)
 
-  groups <- Partition(g,
-                     m.inf[, 1],
-                     mMSE,
-                     dfr,
-                     sig.level=sig.level,
-                     av=x,
-                     1,
-                     rep(0, g),
-                     0,
-                     rep(0, g))
+  groups <- NULL
+  if(version=="p"){
+      groups <- PartitionParametric(g,
+                                       m.inf[, 1],
+                                       mMSE,
+                                       dfr,
+                                       sig.level=sig.level,
+                                       av=x,
+                                       1,
+                                       rep(0, g),
+                                       0,
+                                       rep(0, g))
+  }else if(version=="o"){
+      groups <- OriginalPartition(g,
+                                    m.inf[, 1],
+                                    mMSE,
+                                    dfr,
+                                    sig.level=sig.level,
+                                    av=x,
+                                    1,
+                                    rep(0, g),
+                                    0,
+                                    rep(0, g))     
+  }else{
+      groups <- PartitionNonParametric(g,
+                                   m.inf[, 1],
+                                   mMSE,
+                                   dfr,
+                                   sig.level=sig.level,
+                                   av=x,
+                                   1,
+                                   rep(0, g),
+                                   0,
+                                   rep(0, g))
+  }
 
   res <- list(av=x,
               groups=groups,
