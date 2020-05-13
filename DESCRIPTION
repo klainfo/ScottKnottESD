@@ -1,8 +1,8 @@
 Package: ScottKnottESD
 Type: Package
 Title: The Scott-Knott Effect Size Difference (ESD) Test
-Version: 2.0.3
-Date: 2018-05-08
+Version: 2.0.4
+Date: 2019-10-11
 Author: Chakkrit Tantithamthavorn
 Maintainer: Chakkrit Tantithamthavorn <kla@chakkrit.com>
 Description: The Scott-Knott Effect Size Difference (ESD) test is a mean comparison approach that leverages a hierarchical clustering to partition the set of treatment means (e.g., means of variable importance scores, means of model performance) into statistically distinct groups with non-negligible difference [Tantithamthavorn et al., (2018) <doi:10.1109/TSE.2018.2794977>].

@@ -43,6 +43,10 @@ Partition <- function(g,
         
         a <- av$model[av$model[,2] == names(means[k]),1]
         b <- av$model[av$model[,2] == names(means[g]),1]  
+
+        if (all(a==b)) {
+            return(TRUE)
+        }
         
         magnitude <- as.character(cohen.d(a,b)$magnitude)
         return(magnitude == "negligible")
