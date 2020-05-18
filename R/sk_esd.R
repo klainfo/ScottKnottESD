@@ -22,7 +22,7 @@
 #' @rdname sk_esd
 #' @aliases SK.ESD
 #' @export 
-sk_esd <- function(x, version="np", alpha=0.05, ...){
+sk_esd <- function(x, version="p", alpha=0.05, ...){
     x <- data.frame(x)
     av <- aov(value ~ variable, data=reshape2::melt(x, id.vars=0 )) 
     sk <- scottknott(av, version, which='variable',  dispersion='s', sig.level=alpha) 
