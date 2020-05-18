@@ -89,7 +89,8 @@ import pandas as pd
 sk = importr('ScottKnottESD')
 data = pd.read_csv("data.csv")
 r_sk = sk.sk_esd(data)
-ranking = pd.DataFrame({'columns':data.columns, 'rank':list(r_sk[1])})
+ranking = pd.DataFrame({'columns':data.columns, 'rank':list(r_sk[1])}) # long format
+ranking = pd.DataFrame([list(r_sk[1])], columns=data.columns) # wide format
 ```
 ### Referencing ScottKnottESD
 ScottKnottESD can be referenced as:
