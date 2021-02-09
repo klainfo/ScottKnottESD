@@ -4,22 +4,34 @@
 [![Downloads](http://cranlogs.r-pkg.org/badges/ScottKnottESD)]( https://cran.r-project.org/package=ScottKnottESD)
 [![DOI](https://zenodo.org/badge/39927952.svg)](https://zenodo.org/badge/latestdoi/39927952)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+# The ScottKnott Effect Size Difference (ESD) test (Version 3.0, the development branch) 
+The Scott-Knott Effect Size Difference (ESD) test is a multiple comparison approach that leverages a hierarchical clustering to partition the set of treatment averages (e.g., means) into statistically distinct groups with non-negligible difference [Tantithamthavorn et al., (2018) <https://doi.org/10.1109/TSE.2018.2794977>].
+It is an alternative approach of the Scott-Knott test that considers the magnitude of the difference (i.e., effect size) of treatment means with-in a group and between groups.
+Therefore, the Scott-Knott ESD test (v2+) produces the ranking of treatment means while ensuring that (1) the magnitude of the difference for all of the treatments in each group is negligible; and (2) the magnitude of the difference of treatments between groups is non-negligible.
+The Scott-Knott ESD test is recommended than other multiple comparison tests, since it does not produce overlapping groups like other post-hoc tests (e.g., Nemenyi’s test).
 
-# The Non-Parametric ScottKnott ESD test (Version 3.0, the development branch) 
+## The Parametric ScottKnott ESD test (available in Version 2.0+)
+The Parametric Scott-Knott ESD test is a mean comparison approach that leverages a hierarchical clustering to partition the set of treatment _means_.
+This Parametric ScottKnott ESD test is based on the ANOVA assumptions of the original ScottKnott test (e.g., the assumptions of normal distributions, homogeneous distributions, and the minimum sample size). The mechanism of the Scott-Knott ESD test is made up of 2 steps:
 
+* **(Step 1) Find a partition that maximizes treatment means between groups.** We begin by sorting the treatment means. Then, following the original Scott-Knott test, we compute the sum of squares between groups (i.e., a dispersion measure of data points) to identify a partition that maximizes treatment means between groups. 
+* **(Step 2) Splitting into two groups or merging into one group.** Instead of using a likelihood ratio test and a Chi-square distribution as a splitting and merging criterion (i.e., a hypothesis testing of the equality of all treatment means), we analyze the magnitude of the difference for each pair for all of the treatment means of the two groups. If there is any one pair of treatment means of two groups are non-negligible, we split into two groups. Otherwise, we merge into one group. We use the Cohen effect size --- an effect size estimate based on the difference between the two means divided by the standard deviation of the two treatment means (d = (mean(x_1) - mean(x_2))/s.d.).
+
+Unlike the earlier version of the Scott-Knott ESD test (v1.x) that post-processes the groups that are produced by the Scott-Knott test, the Scott-Knott ESD test (v2.x) pre-processes the groups by merging pairs of statistically distinct groups that have a negligible difference.
+
+
+## The Non-Parametric ScottKnott ESD test (available in Version 3.0, the development branch) 
 The Non-Parametric ScottKnott ESD (NPSK) test is a multiple comparison approach that leverages a hierarchical clustering to partition the set of median values of techniques (e.g., medians of variable importance scores, medians of model performance) into statistically distinct groups with non-negligible difference.
-The Non-Parametric Scott-Knott ESD test is recommended that other multiple comparison tests, since it does not produce overlapping groups like other post-hoc tests (e.g., Nemenyi’s test) and it does not require the assumptions of normal distributions, homogeneous distributions, and the minimum sample size.
-Thus, this Non-Parametric ScottKnott ESD (NPSK) test does not require any basic ANOVA assumptions of the original ScottKnott test.
-
+The Non-Parametric ScottKnott ESD (NPSK) does not require the assumptions of normal distributions, homogeneous distributions, and the minimum sample size.
 The mechanism of the Non-Parametric Scott-Knott ESD test is made up of 2 steps:
 
-* **(Step 1) Find a partition that maximizes treatment means between groups.** We begin by sorting the median value of the distributions. Then, we compute the Kruskal Chisq statistics to identify a partition that maximizes the median values between groups. The Kruskal Chisq test is a non-parametric test, which does not require data normality and data heterogeneity assumptions.
+* **(Step 1) Find a partition that maximizes treatment medians between groups.** We begin by sorting the median value of the distributions. Then, we compute the Kruskal Chisq statistics to identify a partition that maximizes the median values between groups. The Kruskal Chisq test is a non-parametric test, which does not require data normality and data heterogeneity assumptions.
 * **(Step 2) Splitting into two groups or merging into one group.** We analyze the magnitude of the difference for each pair for all of the treatment medians of the two groups. If there is any one pair of treatment medians of two groups are non-negligible, we split into two groups. Otherwise, we merge into one group. We use the Cliff $|\delta|$ effect size to estimate the effect size of the difference between the two medians.
 
 
 # Release Notes
 
-V3.0.0 - The Non-Parametric ScottKnott ESD test. (Pending approval to be available in CRAN)
+V3.0.0 - Supporting the Non-Parametric ScottKnott ESD test. (Pending approval to be available in CRAN)
 
 ```r
 install.packages("devtools")
