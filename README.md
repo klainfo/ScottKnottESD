@@ -109,8 +109,16 @@ data = pd.DataFrame(
 )
 display(data)
 r_sk = sk.sk_esd(data)
-ranking = pd.DataFrame({'columns':r_sk[2], 'rank':list(r_sk[1])}) # long format
-ranking = pd.DataFrame([list(r_sk[1])], columns=r_sk[2]) # wide format
+column_order = [i - 1 for i in list(r_sk[3])]
+ranking = pd.DataFrame(
+    {
+        "technique": [data.columns[i] for i in column_order],
+        "rank": r_sk[1].astype("int"),
+    }
+) # long format
+ranking = pd.DataFrame(
+    [r_sk[1].astype("int")], columns=[data.columns[i] for i in column_order]
+) # wide format
 ```
 ### Referencing ScottKnottESD
 ScottKnottESD can be referenced as:
