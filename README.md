@@ -99,7 +99,15 @@ pandas2ri.activate()
 import pandas as pd
 
 sk = importr('ScottKnottESD')
-data = pd.read_csv("data.csv")
+data = pd.DataFrame(
+    {
+        "TechniqueA": [5, 1, 4],
+        "TechniqueB": [6, 8, 3],
+        "TechniqueC": [7, 10, 15],
+        "TechniqueD": [7, 10.1, 15],
+    }
+)
+display(data)
 r_sk = sk.sk_esd(data)
 ranking = pd.DataFrame({'columns':r_sk[2], 'rank':list(r_sk[1])}) # long format
 ranking = pd.DataFrame([list(r_sk[1])], columns=r_sk[2]) # wide format
