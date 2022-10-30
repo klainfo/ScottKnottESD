@@ -88,6 +88,8 @@ if len(names_to_install) > 0:
     utils.install_packages(StrVector(names_to_install))
 ```
 
+**Warning**: *this solution may not work properly in some processors like the M1 chip. This was tested in Google Colab running an Ubuntu machine.*
+
 ###### Install development version in GitHub from python (by calling R package via rpy2)
 
 ```python
@@ -101,6 +103,8 @@ devtools.install_github("klainfo/ScottKnottESD", ref="development")
 sk = importr("ScottKnottESD")
 
 ```
+
+**Warning**: *this solution may not work properly in some processors like the M1 chip. This was tested in Google Colab running an Ubuntu machine.*
 
 ### Example R Usage
 ```r
