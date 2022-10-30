@@ -92,7 +92,7 @@ pip install rpy2
 env ARCHFLAGS="-arch i386 -arch x86_64" pip install rpy2
 ```
 
-```
+```python
 from rpy2.robjects.packages import importr
 from rpy2.robjects import r, pandas2ri
 pandas2ri.activate()
