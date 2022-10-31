@@ -109,7 +109,7 @@ data = pd.DataFrame(
 )
 display(data)
 r_sk = sk.sk_esd(data)
-column_order = [i - 1 for i in list(r_sk[3])]
+column_order = list(r_sk[3] - 1)
 ranking = pd.DataFrame(
     {
         "technique": [data.columns[i] for i in column_order],
