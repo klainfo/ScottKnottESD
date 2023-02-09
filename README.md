@@ -67,6 +67,45 @@ install.packages("ScottKnottESD")
 install.packages("devtools")
 devtools::install_github("klainfo/ScottKnottESD", ref="development")
 ```
+
+###### Install from python (by calling R package via rpy2)
+
+```python
+import rpy2.robjects.packages as rpackages
+from rpy2.robjects.vectors import StrVector  # R vector of strings
+
+utils = rpackages.importr("utils")
+utils.chooseCRANmirror(ind=1)  # select the first mirror in the list
+
+# R package names
+packnames = ["ScottKnottESD"]
+
+# Selectively install what needs to be installed.
+names_to_install = [x for x in packnames if not rpackages.isinstalled(x)]
+print(f"packages to install: {names_to_install}")
+
+if len(names_to_install) > 0:
+    utils.install_packages(StrVector(names_to_install))
+```
+
+**Warning**: *this solution may not work properly in some processors like the M1 chip. This was tested in Google Colab running an Ubuntu machine.*
+
+###### Install development version in GitHub from python (by calling R package via rpy2)
+
+```python
+from rpy2.robjects.packages import importr
+from rpy2.robjects import r, pandas2ri
+
+
+pandas2ri.activate()
+devtools = importr("devtools")
+devtools.install_github("klainfo/ScottKnottESD", ref="development")
+sk = importr("ScottKnottESD")
+
+```
+
+**Warning**: *this solution may not work properly in some processors like the M1 chip. This was tested in Google Colab running an Ubuntu machine.*
+
 ### Example R Usage
 ```r
 library(ScottKnottESD)
