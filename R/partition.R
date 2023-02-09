@@ -41,15 +41,21 @@ PartitionParametric <- function(g,
             return(TRUE)
         }
         
-        a <- av$model[av$model[,2] == names(means[k]),1]
-        b <- av$model[av$model[,2] == names(means[g]),1]  
-
-        if (all(a==b)) {
-            return(TRUE)
+        negligible <- TRUE
+          for(i in k:(g-1)){
+            for(j in (i+1):g){
+              a <- av$model[av$model[,2] == names(means[i]),1]
+              b <- av$model[av$model[,2] == names(means[j]),1]  
+              if (!all(a==b)) {
+              magnitude <- as.character(cohen.d(a,b)$magnitude, paired=TRUE)
+              if(magnitude != "negligible"){
+                negligible <- FALSE
+              }
+            }
+          }
         }
-        
-        magnitude <- as.character(cohen.d(a,b)$magnitude, paired=TRUE)
-        return(magnitude == "negligible")
+      
+        return(negligible)
     }
     ############################################################
     
@@ -158,15 +164,20 @@ PartitionNonParametric <- function(g,
     ############################################################
     # Compute the magnitude of the difference of all distributions in a group
     diff <- function(k, g, av, means){
+        if(k==g){ # if k and g are the same treatment
+          return(TRUE)
+         }
         negligible <- TRUE
         for(i in k:(g-1)){
             for(j in (i+1):g){
-                a <- av$model[av$model[,2] == names(means[k]),1]
-                b <- av$model[av$model[,2] == names(means[g]),1]   
+                a <- av$model[av$model[,2] == names(means[i]),1]
+                b <- av$model[av$model[,2] == names(means[j]),1]
+                if(!all(a==b)){
                 magnitude <- as.character(effsize::cliff.delta(a,b)$magnitude, paired=TRUE)
                 if(magnitude != "negligible"){
                     negligible <- FALSE
                 }
+              }
             }
         }
         return(negligible)
